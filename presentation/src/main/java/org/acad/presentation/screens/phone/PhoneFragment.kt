@@ -7,13 +7,14 @@ import org.acad.domain.model.User
 import org.acad.presentation.base.BaseFragment
 import org.acad.presentation.databinding.FragmentPhoneBinding
 import org.acad.presentation.screens.phone.PhoneVM.Effect
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * Created by Acad Bek on 2/15/2025
  */
 class PhoneFragment : BaseFragment<FragmentPhoneBinding>(FragmentPhoneBinding::inflate) {
 
-    private lateinit var vm: PhoneVM
+    private val vm: PhoneVM by viewModel()
 
     @SuppressLint("CheckResult")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

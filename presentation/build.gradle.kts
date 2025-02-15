@@ -42,6 +42,7 @@ dependencies {
 
     implementation (libs.rxandroid)
     implementation(libs.rxkotlin)
+    implementation(libs.koin.android)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
