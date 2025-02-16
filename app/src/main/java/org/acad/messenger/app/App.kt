@@ -2,6 +2,7 @@ package org.acad.messenger.app
 
 import android.app.Application
 import org.acad.messenger.di.apiModule
+import org.acad.messenger.di.appModule
 import org.acad.messenger.di.repoModule
 import org.acad.messenger.di.storeModule
 import org.acad.messenger.di.useCaseModule
@@ -22,6 +23,7 @@ class App : Application() {
             AndroidLogger()
             androidContext(this@App)
             modules(
+                appModule,
                 repoModule,
                 useCaseModule,
                 storeModule,
