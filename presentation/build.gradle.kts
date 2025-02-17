@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("io.realm.kotlin")
 }
 
 android {
@@ -44,6 +45,7 @@ dependencies {
     implementation(libs.rxkotlin)
     implementation(libs.koin.android)
     implementation(libs.cicerone)
+    implementation(libs.library.base)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
