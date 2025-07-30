@@ -1,6 +1,6 @@
 package org.acad.presentation.base
 
-import android.database.Observable
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.viewbinding.ViewBinding
+import io.reactivex.rxjava3.core.Observable
 
 /**
  * Created by Acad Bek on 7/30/2025
@@ -33,7 +34,8 @@ abstract class BaseFragment<VB: ViewBinding> (
         _binding = null
     }
 
-//    fun <T: Any, R: Any> Observable<T>.observe(observer: (R) -> Unit, mapper: (T) -> R) {
-//        map(mapper).distinctUntilChanged().doOnNext(observer)
-//    }
+    @SuppressLint("CheckResult")
+    fun <T: Any, R: Any> Observable<T>.observe(observer: (R) -> Unit, mapper: (T) -> R) {
+        map(mapper).distinctUntilChanged().doOnNext(observer)
+    }
 }
