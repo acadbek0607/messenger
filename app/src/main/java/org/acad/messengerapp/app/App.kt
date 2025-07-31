@@ -1,6 +1,7 @@
 package org.acad.messengerapp.app
 
 import android.app.Application
+import org.acad.messengerapp.di.appModule
 import org.acad.messengerapp.di.localModule
 import org.acad.messengerapp.di.remoteModule
 import org.acad.messengerapp.di.repoModule
@@ -26,7 +27,8 @@ class App : Application() {
                 useCaseModule,
                 localModule,
                 remoteModule,
-                vmModule
+                vmModule,
+                appModule
             )
         }
     }
