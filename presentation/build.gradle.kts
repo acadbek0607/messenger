@@ -42,7 +42,6 @@ dependencies {
 
     implementation (libs.rxandroid)
     implementation(libs.rxkotlin)
-    implementation (libs.rxandroid)
     implementation(libs.koin.android)
     implementation(libs.cicerone)
 
