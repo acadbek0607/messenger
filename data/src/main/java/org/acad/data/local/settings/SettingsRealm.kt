@@ -2,14 +2,14 @@ package org.acad.data.local.settings
 
 import io.realm.kotlin.types.RealmObject
 import io.realm.kotlin.types.annotations.PrimaryKey
-import io.realm.kotlin.types.ObjectId
+import org.mongodb.kbson.ObjectId
 
 
 /**
  * Created by Acad Bek on 8/1/2025
  */
-data class SettingsRealm(
+class SettingsRealm : RealmObject {
     @PrimaryKey
-    val id : ObjectId = ObjectId.create(),
-    val onboarded: Boolean = false
-) : RealmObject
+    var id : ObjectId = ObjectId()
+    var onboarded: Boolean = false
+}
