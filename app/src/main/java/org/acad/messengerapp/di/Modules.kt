@@ -18,8 +18,10 @@ import org.acad.domain.usecases.auth.SendSmsCode
 import org.acad.domain.usecases.settings.GetOnboarded
 import org.acad.domain.usecases.settings.Onboarded
 import org.acad.presentation.screens.main.MainVM
+import org.acad.presentation.screens.onboarding.OnboardingVM
 import org.acad.presentation.screens.phone.PhoneVM
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
+import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
 /**
@@ -57,6 +59,7 @@ val remoteModule = module {
 }
 
 val vmModule = module {
-    viewModel { PhoneVM(get()) }
-    viewModel { MainVM(get()) }
+    viewModelOf (::PhoneVM)
+    viewModelOf (::MainVM)
+    viewModelOf (::OnboardingVM)
 }
