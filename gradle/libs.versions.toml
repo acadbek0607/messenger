@@ -17,6 +17,11 @@ koinAndroid = "4.1.0"
 realm = "3.0.0"
 coreSplashscreen = "1.0.1"
 otp = "v1.1.2-ktx"
+analytics = "22.5.0"
+auth = "23.2.1"
+firestore = "25.1.4"
+bom = "34.2.0"
+firebaseAnalytics = "23.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,11 +38,16 @@ rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroi
 rxkotlin = { module = "io.reactivex.rxjava3:rxkotlin", version.ref = "rxkotlin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinAndroid" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
-otpview = {group = "com.github.aabhasr1", name = "OtpView", version.ref = "otp"}
+otpview = { group = "com.github.aabhasr1", name = "OtpView", version.ref = "otp" }
+firebase-analytics-ktx = { group = "com.google.firebase", name = "firebase-analytics-ktx", version.ref = "analytics" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "auth" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firestore" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "bom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 realm-kotlin = { id = "io.realm.kotlin", version.ref = "realm" }
-
+google-services     = { id = "com.google.gms.google-services", version = "4.4.3" }
