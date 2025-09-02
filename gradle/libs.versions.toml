@@ -16,6 +16,7 @@ rxkotlin = "3.0.1"
 koinAndroid = "4.1.0"
 realm = "3.0.0"
 coreSplashscreen = "1.0.1"
+otp = "v1.1.2-ktx"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,7 @@ rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroi
 rxkotlin = { module = "io.reactivex.rxjava3:rxkotlin", version.ref = "rxkotlin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinAndroid" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+otpview = {group = "com.github.aabhasr1", name = "OtpView", version.ref = "otp"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
